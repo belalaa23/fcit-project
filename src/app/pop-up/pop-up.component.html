@@ -1,0 +1,42 @@
+<div class="popup">
+<div class="title">
+  <p>paritcipant</p>
+  <h1>nom</h1>
+</div>
+<div class="container">
+  <div class="evaluationtech">
+    <div class="groups">
+      <div class="group">
+        <p>autonomie</p>
+        <app-toggle></app-toggle>
+      </div>
+      <div class="group">
+        <p>assimilation & réalisation</p>
+        <app-toggle></app-toggle>
+      </div>
+    </div>
+  <h3>Atteinte des  objectif pedagogique</h3>
+  <ul>
+      <li *ngFor="let tache of list" class="group">
+        <p>{{tache}}</p>
+        <app-toggle></app-toggle> 
+      </li>
+  </ul>
+  <h3>point forts / Axe d'amelioration</h3>
+  <textarea name="" id="" cols="75" rows="3" placeholder="lOREM 20"></textarea>
+</div>
+  <div class="evaluationcomportemental">
+    <ul>
+      <li *ngFor="let tache of list" class="group">
+        <p>{{tache}}</p>
+        <app-toggle></app-toggle> 
+      </li>
+  </ul>
+  <div class="avis">
+    <h3>commentaire / progression</h3>
+    <textarea name="" id="" cols="75" rows="8" placeholder="lOREM 20"></textarea>
+  </div>
+  </div>
+</div>
+<span class="btn" (click)="closeDialog()"><a >soumettre l'évaluation</a></span>
+</div>

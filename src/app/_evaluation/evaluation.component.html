@@ -1,0 +1,30 @@
+<h3 class="title">Evaluation des participants</h3>
+<app-formation [title]="'the way for a better way'" [dates]="'4 juillet 2001'"[eval]="true" [nombrep]="13"></app-formation>
+<div class="container">
+   <p>{{evaluation()}}</p>
+    <div class="participants">
+         <div class="header">
+            <ul>
+               <li>Participants</li>
+               <li>Identifiant</li>
+               <li>Etat</li>
+               <li>Dernier miseajour</li>
+               <li>Action</li>
+            </ul>
+         </div>
+      <div class="details">
+         <app-participant-eval *ngFor="let participant of participants" [name]="participant.name" [identifiant]="participant.identifiant" [etat]="participant.etat" [dmaj]="participant.dmaj" ></app-participant-eval>
+      </div>
+    </div>
+    <div class="evaluation">
+         <div class="evaltech">
+            <p>Evaluation technique</p>
+            <textarea name="" id="" cols="43" rows="8" placeholder="introduicez ici votre commentaire génerale"></textarea>
+         </div>
+         <div class="evalcomportemental">
+            <p>evaluation comportemental</p>
+            <textarea name="" id="" cols="43" rows="8" placeholder="introduicez ici votre commentaire génerale"></textarea>
+         </div>
+    </div>
+    <span class="btn"><a >soumettre l'évaluation</a></span>
+</div>

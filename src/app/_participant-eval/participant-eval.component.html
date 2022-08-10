@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="header">
+        <ul>
+           <li>{{name}}</li>
+           <li>{{identifiant}}</li>
+           <li ><span [ngClass]="etat === 'évaluer' ? 'green' : 'orange' ">{{etat}}</span></li>
+           <li >{{dmaj}}</li>
+           <li> <a (click)="openDialog()"> Evaluation participant </a></li>
+        </ul>
+     </div>
+</div>
