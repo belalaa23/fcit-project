@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TestService } from '../test.service';
 @Component({
   selector: 'app-formation',
   templateUrl: './formation.component.html',
@@ -18,14 +19,22 @@ export class FormationComponent implements OnInit {
   eval=false
   @Input()
   evaluated="0";
-  constructor(private route:ActivatedRoute , private router:Router) { 
+  @Input()
+  id=0;
+  @Input()
+  nombreval=0;
+  constructor(private route:ActivatedRoute , private router:Router,private TestService:TestService) { 
     
   }
 
   ngOnInit(): void {
+    
   }
   goToEval(){
-    this.router.navigate(['evaluation'],{relativeTo: this.route});
+    this.router.navigate(['evaluation',this.id],{relativeTo: this.route});
   }
+ goToConsulte(){
+  this.router.navigate(['consulter',this.id],{relativeTo: this.route});
+ }
 
 }

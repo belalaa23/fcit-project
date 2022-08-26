@@ -15,7 +15,13 @@ $titletext:#00affa;
     ul{
         list-style: none;
         display:grid;
-        grid-template-columns: repeat(5,146px);
+        grid-template-columns: repeat(5,130px);
+        li:nth-child(2){
+            padding-left:40px;
+        }
+        li:nth-child(5){
+            padding-left:20px;
+        }
         li{
             font-weight: 300;
             font-size: smaller;
@@ -33,13 +39,24 @@ $titletext:#00affa;
                 text-decoration: none;
                 cursor: pointer;
                 padding:6px 15px;
-                border-radius: 20px;
+                border-radius: 10px;
                 transition: all 0.3s ease-in-out;
                 &:hover{
-                    background:rgb(239, 237, 237);
+                    background:rgb(255, 255, 255);
                     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px;
                 }
+            
             }
+            #icon{
+               padding:5px;
+               color:#00affa;
+               cursor: pointer;
+                &:hover{
+                    border-radius: 20px;
+                    background-color:rgb(255, 255, 255);;
+                    box-shadow: rgba(0, 0, 0, 0.20) 0px 1px 2px;
+                }
+               }
         }
     }
 }

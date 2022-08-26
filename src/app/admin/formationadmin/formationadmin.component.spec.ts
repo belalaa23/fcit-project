@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InputfieldComponent } from './inputfield.component';
+import { FormationadminComponent } from './formationadmin.component';
 
-describe('InputfieldComponent', () => {
-  let component: InputfieldComponent;
-  let fixture: ComponentFixture<InputfieldComponent>;
+describe('FormationadminComponent', () => {
+  let component: FormationadminComponent;
+  let fixture: ComponentFixture<FormationadminComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InputfieldComponent ]
+      declarations: [ FormationadminComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InputfieldComponent);
+    fixture = TestBed.createComponent(FormationadminComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

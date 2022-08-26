@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { stringify } from '@angular/compiler/src/util';
+import { Component, OnInit, Output ,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-toggle',
@@ -11,6 +12,10 @@ export class ToggleComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  @Output() public newEvaluation = new EventEmitter();
+  
+
+ 
   goNext(){
     if(this.lvl < 3){
       this.lvl=this.lvl+1;

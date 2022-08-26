@@ -24,12 +24,12 @@
     <div class="show-hide" *ngIf="!eval">
     <div  class="buttons" [ngClass]="done ? 'modif' :''">
         <a *ngIf="!done" ><span class="evaluation" (click)="goToEval()" >Evaluer les participants</span></a>
-        <a ><span class="consulter">Consulter la fiche de la formations</span></a>
+        <a ><span class="consulter" (click)="goToConsulte()">Consulter la fiche de la formations</span></a>
     </div>
     </div>
     <div class="members" *ngIf="eval">
         <p>participant Evaluer </p>
-        <p class="nombre">/{{nombrep}}</p>
+        <p class="nombre">{{nombreval}}/{{nombrep}}</p>
     </div>
 </div>
 </div>

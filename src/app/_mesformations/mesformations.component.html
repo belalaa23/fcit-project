@@ -2,13 +2,13 @@
 <h2>Mes formations</h2>
 <div class="recherche">
 <span class="material-symbols-outlined">search</span>
-<input type="text" placeholder="chercher des formations">
+<input [(ngModel)]="cherche" type="text" placeholder="chercher des formations">
 </div>
 <div class="formations">
 
 
-    <app-formation *ngFor="let formation of formations"[title]="formation.title" [done]="formation.done" [dates]="formation.dates" 
-      [nombrep]="formation.nombrep"></app-formation>
+    <app-formation *ngFor="let formation of formations" [title]="formation.title" [done]="formation.done" [dates]="formation.date" 
+      [nombrep]="formation.nombreparticipant" [id]="formation.formationid"></app-formation>
     
 
 </div>

@@ -1,0 +1,38 @@
+<div class="formation">
+    <div class="title">
+     <h3>{{title}}</h3>  
+     
+    <!--   <div class="droite"  >
+            <div  class="notifier"></div>
+            <p > Evaluation non encore soumise </p>
+            <p > Evaluation soumise </p>
+        </div>--> 
+    </div>
+    <div class="bottomside">
+    <div class="infos">
+        <div class="info">
+            <p>Date de la formation :</p>
+            <p class="gras">{{dates}}</p>
+        </div>
+       <div class="info">
+            <p>Nom de participants :</p>
+            <p class="gras">{{nombrep}}</p>
+        </div>
+        <div class="info">
+            <p>Formateur :</p>
+            <p class="gras">{{nomformateur}}</p>
+        </div>
+    
+    </div>
+    <div class="show-hide" >
+    <div  class="buttons" >
+        <a *ngIf="false" ><span class="evaluation"  >Evaluer les participants</span></a>
+        <a ><span class="consulter" >Consulter la fiche de la formations</span></a>
+    </div>
+    </div>
+    <div class="members" *ngIf="eval">
+        <p>participant Evaluer </p>
+        <p class="nombre">/</p>
+    </div>
+</div>
+</div>

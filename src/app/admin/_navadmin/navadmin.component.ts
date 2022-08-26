@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navadmin',
@@ -6,26 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navadmin.component.scss']
 })
 export class NavadminComponent implements OnInit {
-  listes=[
-    {
-      title:'Mon profile',
-      icon:'account_circle'
-    },
-    {
-      title:'Mes formateurs',
-      icon:'groups'
-    },
-    
-    {
-      title:'suivi de progression',
-      icon:'query_stats'
-    },
-    
-    
-  ]
-  constructor() { }
+
+  constructor(private router:Router) { }
 //,'liste des formateurs','listes des formations','suivi de progression'
   ngOnInit(): void {
   }
-
+  active=false;
+expand(){
+  
+  this.active=! this.active;
+}
 }

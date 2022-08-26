@@ -23,7 +23,11 @@ export class ParticipantEvalComponent implements OnInit {
   }
 
   openDialog(){
-    this.dialogRef.open(PopUpComponent);
+    this.dialogRef.open(PopUpComponent,{data:{
+      name:this.name,
+      etat:this.etat,
+      id:this.identifiant
+    }});
     console.log("ok")
   }
 

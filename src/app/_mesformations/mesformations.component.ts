@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { TestService } from "../test.service";
+import { ActivatedRoute } from '@angular/router';
  class formation {
   "done": boolean;
   "title":string;
-  "dates": string;
-  "nombrep": number;
-  "eval":boolean;
+  "date": string;
+  "nombreparticipant": number;
+  "formationid":number;
 }
-
-
-
 
 
 @Component({
@@ -17,12 +16,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mesformations.component.scss']
 })
 export class MesformationsComponent implements OnInit {
+ public cherche="";
+  formations:formation[]=[];
 
-  constructor() { }
+constructor(private TestService:TestService,private route:ActivatedRoute ){
+}
+ngOnInit(): void {
+  this.fetchUsers();
+}
 
-  ngOnInit(): void {
-  }
-  formations:formation[]=[
+fetchUsers(){
+  this.TestService.getFormation().subscribe((data:any)=>{
+    console.log(data);
+    this.formations=data;
+    console.log("data received succesfullly");
+  })
+}
+ /** formations:formation[]=[
     {"done":false ,"title": "Les bases de l'info1" , "dates":"12 mars 1999" , "nombrep":12,"eval":false },
     {  "done":true ,"title": "Les bases de l'info2" , "dates":"12 mars 1999" , "nombrep":12 ,"eval":false },
     {  "done":true ,"title": "Les bases de l'info3" , "dates":"12 mars 1999" , "nombrep":12 ,"eval":false },
@@ -32,5 +42,12 @@ export class MesformationsComponent implements OnInit {
     {  "done":true ,"title": "Les bases de l'info3" , "dates":"12 mars 1999" , "nombrep":12 ,"eval":false },
     {  "done":true ,"title": "Les bases de l'info4" , "dates":"12 mars 1999" , "nombrep":12 ,"eval":false }
   ]
-
+**/
+display(){
+  if (this.cherche===""){
+    this.fetchUsers();
+  }else{
+    
+  }
+}
 }
